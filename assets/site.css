@@ -1,0 +1,93 @@
+/* darrenhelton.com
+   After Edward Tufte's books and the layout of Tufte CSS (Dave Liepmann, MIT licence): one reading column with a wide
+   margin, ET Book, and nothing that is not information. Dark by default; light is the switch. */
+
+@font-face { font-family: "et-book"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("/assets/fonts/et-book-roman.woff") format("woff"); }
+@font-face { font-family: "et-book"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url("/assets/fonts/et-book-italic.woff") format("woff"); }
+
+:root {
+  color-scheme: dark;
+  --paper: #1f1e1b; --ink: #e9e5dc; --ink-2: #b7b2a8; --rule: #4a4741; --line: #8f8a80;
+}
+:root[data-mode="light"] {
+  color-scheme: light;
+  --paper: #fffff8; --ink: #111; --ink-2: #555; --rule: #cfcfc6; --line: #9a9a92;
+}
+
+html { font-size: 15px; background: var(--paper); -webkit-text-size-adjust: 100%; }
+body {
+  width: 87.5%; max-width: 1400px; margin: 0 auto; padding-left: 12.5%;
+  font-family: et-book, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  color: var(--ink); font-kerning: normal; text-rendering: optimizeLegibility;
+}
+article { padding: 1rem 0 5rem; }
+section { padding: .6rem 0; }
+
+h1 { font-weight: 400; font-size: 3.2rem; line-height: 1; margin: 3.6rem 0 1.5rem; }
+h2 { font-weight: 400; font-style: italic; font-size: 2.2rem; line-height: 1; margin: 3.8rem 0 0; }
+.subtitle { font-style: italic; font-size: 1.8rem; line-height: 1.2; margin: 1rem 0; }
+p { font-size: 1.4rem; line-height: 2.1rem; margin: 1.6rem 0; }
+section > p, .colophon { width: 55%; }
+
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .14em; text-decoration-color: var(--line); }
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+::selection { background: #f0e6c8; color: #111; }
+.sc, .newthought { font-variant: small-caps; letter-spacing: .02em; }
+.newthought { font-size: 1.2em; }
+
+/* the top line: home on the left, the light switch on the right */
+.topline { display: flex; align-items: baseline; width: 90%; padding-top: 2.2rem;
+  font-size: 1.15rem; font-variant: small-caps; letter-spacing: .03em; color: var(--ink-2); }
+.topline a { text-decoration: none; }
+.topline a:hover { text-decoration: underline; }
+.mode { display: none; margin-left: auto; font: inherit; color: inherit; background: none; border: 0; padding: 0;
+  cursor: pointer; }
+.js .mode { display: inline; }
+.mode:hover { text-decoration: underline; text-underline-offset: .14em; }
+
+/* figures: in the column with the caption in the margin, or across the page with the caption beneath */
+figure { margin: 2.6rem 0 3.2rem; max-width: 55%; }
+figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+figcaption { float: right; clear: right; margin-right: -48%; max-width: 40%; font-size: 1.1rem; line-height: 1.45;
+  color: var(--ink-2); }
+figure.fullwidth { max-width: 90%; clear: both; padding-top: .4rem; }
+figure.fullwidth figcaption { float: none; margin: .8rem 24% 0 0; max-width: none; }
+
+/* a film: a still from the film, and a link, until it is played */
+.yt { position: relative; display: block; aspect-ratio: 16 / 9; background: #000; }
+.yt img { height: 100%; box-sizing: border-box; object-fit: cover; }
+.play { position: absolute; left: 50%; top: 50%; width: 3.4rem; height: 3.4rem; transform: translate(-50%, -50%);
+  border-radius: 50%; background: rgba(17, 17, 17, .55); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .75);
+  transition: background .15s; }
+.play::after { content: ""; position: absolute; left: 54%; top: 50%; transform: translate(-50%, -50%);
+  border: solid transparent; border-width: .62rem 0 .62rem 1.05rem; border-left-color: #fff; }
+.yt:hover .play, .yt:focus-visible .play { background: rgba(17, 17, 17, .85); }
+.film iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--rule); }
+
+/* a site kept as it stood, framed in the page */
+.frame { border: 1px solid var(--rule); background: #0b0b0b; }
+.frame iframe { display: block; width: 100%; height: 40rem; border: 0; }
+.viewer .frame iframe { height: calc(100vh - 9rem); min-height: 30rem; }
+.viewer p { width: 90%; margin: 1.2rem 0 1rem; font-size: 1.2rem; line-height: 1.6; color: var(--ink-2); }
+
+.colophon { margin-top: 4.4rem; font-size: 1.15rem; line-height: 1.8; color: var(--ink-2); }
+.colophon a { text-decoration-color: transparent; }
+.colophon a:hover { text-decoration-color: currentColor; }
+
+@media (max-width: 760px) {
+  body { width: 84%; padding: 0 8%; }
+  h1 { font-size: 2.6rem; margin-top: 2.6rem; }
+  h2 { font-size: 1.9rem; margin-top: 3rem; }
+  .subtitle { font-size: 1.5rem; }
+  section > p, .colophon, .topline { width: 100%; }
+  figure, figure.fullwidth { max-width: 100%; }
+  figcaption, figure.fullwidth figcaption { float: none; margin: .6rem 0 0; max-width: none; }
+  .frame iframe { height: 32rem; }
+}
+@media print {
+  :root, :root[data-mode] { color-scheme: light; --paper: #fff; --ink: #000; --ink-2: #444; --rule: #bbb; --line: #888; }
+  .topline, .frame, .play { display: none; }
+}

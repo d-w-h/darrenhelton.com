@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AGEWARDEN | Darren Helton</title>
+<meta name="description" content="AGEWARDEN tells a website whether a visitor is over eighteen from seconds of speech: 96.1% accurate on recordings it never learned from, with no minors passed.">
+<meta name="author" content="Darren Helton">
+<link rel="me" href="https://www.linkedin.com/in/darrenhelton/">
+<meta name="robots" content="max-image-preview:large">
+<link rel="canonical" href="https://darrenhelton.com/agewarden/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Darren Helton">
+<meta property="og:title" content="AGEWARDEN | Darren Helton">
+<meta property="og:description" content="AGEWARDEN tells a website whether a visitor is over eighteen from seconds of speech: 96.1% accurate on recordings it never learned from, with no minors passed.">
+<meta property="og:url" content="https://darrenhelton.com/agewarden/">
+<meta property="og:image" content="https://darrenhelton.com/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1f1e1b">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css?v=82c61837">
+<script>document.documentElement.classList.add('js');try{if(localStorage.getItem('mode')==='light')document.documentElement.dataset.mode='light'}catch{}</script>
+<script src="/assets/site.js?v=d9d2a1b8" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://darrenhelton.com/#person","name":"Darren Helton","givenName":"Darren","familyName":"Helton","url":"https://darrenhelton.com/","address":{"@type":"PostalAddress","addressLocality":"San Francisco","addressRegion":"CA","addressCountry":"US"},"sameAs":["https://www.linkedin.com/in/darrenhelton/"],"description":"Builds products from architecture to launch and leads the teams that ship them. Seven years at Linden Lab, maker of Second Life.","knowsAbout":["product development","machine learning","product management","voice AI","age verification","trust and safety","growth","customer data platforms","conversational AI","search engine optimization","answer engine optimization"]},{"@type":"SoftwareApplication","name":"AGEWARDEN","url":"https://agewarden.ai/","applicationCategory":"SecurityApplication","operatingSystem":"Web","description":"Age verification from seconds of speech, with no ID, no face image and no stored voiceprint.","creator":{"@id":"https://darrenhelton.com/#person"},"subjectOf":{"@id":"https://darrenhelton.com/agewarden/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Darren Helton","item":"https://darrenhelton.com/"},{"@type":"ListItem","position":2,"name":"AGEWARDEN","item":"https://darrenhelton.com/agewarden/"}]}]}</script>
+</head>
+<body>
+<article>
+<div class="topline"><span><a href="/">Darren Helton</a> &middot; <span class="sc">AGEWARDEN</span></span><button class="mode" type="button" aria-label="Switch to light mode">Light</button></div>
+<h1><span class="sc">AGEWARDEN</span></h1>
+<p class="subtitle">Age verification from seconds of speech</p>
+<section>
+<p><span class="newthought">AGEWARDEN tells a website</span> whether a visitor is over eighteen. The visitor speaks
+briefly, and the site gets a yes or a no. It keeps nothing: no ID, no image of the face, no voiceprint. The website
+never touches the audio.</p>
+<p>The check runs on serverless infrastructure that scales with demand. It is live at
+<a href="https://agewarden.ai/">agewarden.ai</a>, with self-serve sign-up and metered billing.</p>
+</section>
+<section>
+<h2>Results</h2>
+<p><span class="newthought">Every release</span> is tested on the same recordings, none of which it learned from. On them,
+AGEWARDEN is right 96.1% of the time, and no minor gets through.</p>
+<p>In production, 97.8% of adults pass. A repair made to the running model cut wrongful rejections by 39% without
+letting a single minor through.</p>
+<p>Against fakes, two defenses: a detector that separates live speech from a replayed recording almost perfectly
+(AUC 0.99), and a screen for synthetic&nbsp;voices.</p>
+</section>
+<section>
+<h2>The site</h2>
+<figure><figcaption><a href="https://agewarden.ai/">agewarden.ai</a>, the live service.</figcaption><a href="https://agewarden.ai/"><img src="/assets/img/agewarden/agewarden-home.webp?v=88910313" alt="The AGEWARDEN home page: Age verification that keeps nothing." width="1280" height="720" loading="lazy" decoding="async"></a></figure>
+</section>
+<section>
+<h2>Built with</h2>
+<p>AWS Lambda, Step Functions, DynamoDB, S3 and KMS; TypeScript; Stripe.</p>
+</section>
+<p class="colophon">Next: <a href="/covenant-crucible/">Covenant &amp; Crucible</a>. &nbsp;<a href="/">Darren Helton</a>.</p>
+</article>
+</body>
+</html>

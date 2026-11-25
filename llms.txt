@@ -1,0 +1,22 @@
+# Darren Helton
+
+> Builds products from architecture to launch and leads the teams that ship them. San Francisco. Seven years at
+> Linden Lab, leading growth, customer data and conversational AI for Second Life, the virtual world that defined the metaverse.
+
+## Projects
+- [AGEWARDEN](https://darrenhelton.com/agewarden/): age verification from seconds of speech. No ID, no face image, no stored voiceprint.
+  Right 96.1% of the time on recordings it never learned from, with no minor passed; in production, 97.8% of adults
+  pass. Live at agewarden.ai.
+- [Covenant & Crucible](https://darrenhelton.com/covenant-crucible/): read US trade policy as it was published, across more than
+  thirty government sources, and told importers and compliance teams what had changed. AI scored every document;
+  alerts, tariff totals by customs code, and screening against 223,000 people and companies on sanctions and watch
+  lists. Shipped as a web portal, an API and a daily email digest. The product underneath was forecast: twelve models,
+  each trainable from records the government already publishes, to say what was coming, not just what had changed.
+
+## Awards
+- Executive producer of Children of Creation, a commercial for Second Life: gold Telly for visual effects, gold
+  People's Telly, bronze Clio Entertainment award.
+
+## Contact
+- Email: hello@darrenhelton.com
+- LinkedIn: https://www.linkedin.com/in/darrenhelton/

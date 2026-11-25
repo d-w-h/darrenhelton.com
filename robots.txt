@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /covenant-crucible/archive/
+Sitemap: https://darrenhelton.com/sitemap.xml

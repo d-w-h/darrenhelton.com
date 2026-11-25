@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Covenant &amp; Crucible | Darren Helton</title>
+<meta name="description" content="Covenant &amp; Crucible read US trade policy as it was published, across more than thirty government sources, and told importers and compliance teams what had changed.">
+<meta name="author" content="Darren Helton">
+<link rel="me" href="https://www.linkedin.com/in/darrenhelton/">
+<meta name="robots" content="max-image-preview:large">
+<link rel="canonical" href="https://darrenhelton.com/covenant-crucible/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Darren Helton">
+<meta property="og:title" content="Covenant &amp; Crucible | Darren Helton">
+<meta property="og:description" content="Covenant &amp; Crucible read US trade policy as it was published, across more than thirty government sources, and told importers and compliance teams what had changed.">
+<meta property="og:url" content="https://darrenhelton.com/covenant-crucible/">
+<meta property="og:image" content="https://darrenhelton.com/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1f1e1b">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css?v=82c61837">
+<script>document.documentElement.classList.add('js');try{if(localStorage.getItem('mode')==='light')document.documentElement.dataset.mode='light'}catch{}</script>
+<script src="/assets/site.js?v=d9d2a1b8" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://darrenhelton.com/#person","name":"Darren Helton","givenName":"Darren","familyName":"Helton","url":"https://darrenhelton.com/","address":{"@type":"PostalAddress","addressLocality":"San Francisco","addressRegion":"CA","addressCountry":"US"},"sameAs":["https://www.linkedin.com/in/darrenhelton/"],"description":"Builds products from architecture to launch and leads the teams that ship them. Seven years at Linden Lab, maker of Second Life.","knowsAbout":["product development","machine learning","product management","voice AI","age verification","trust and safety","growth","customer data platforms","conversational AI","search engine optimization","answer engine optimization"]},{"@type":"SoftwareApplication","name":"Covenant & Crucible","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Read US trade policy as it was published, across more than thirty government sources, and told importers and compliance teams what had changed: alerts scored by AI, tariff totals by customs code, and sanctions screening.","creator":{"@id":"https://darrenhelton.com/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Darren Helton","item":"https://darrenhelton.com/"},{"@type":"ListItem","position":2,"name":"Covenant & Crucible","item":"https://darrenhelton.com/covenant-crucible/"}]}]}</script>
+</head>
+<body>
+<article>
+<div class="topline"><span><a href="/">Darren Helton</a> &middot; Covenant &amp; Crucible</span><button class="mode" type="button" aria-label="Switch to light mode">Light</button></div>
+<h1>Covenant &amp; Crucible</h1>
+<p class="subtitle">What changed in US trade policy, as it was published</p>
+<section>
+<p><span class="newthought">Covenant &amp; Crucible</span> read US trade policy as it was published and told importers,
+customs brokers and compliance teams what had changed. It watched more than thirty government and trade-data sources:
+the Federal Register, Customs and Border Protection, the US Trade Representative, the Commerce Department's list of
+restricted parties, the World Trade Organization and others.</p>
+<p>AI read every new document and scored how much it mattered, so the changes that counted reached people first. The
+scores became alerts, the total tariff on a product by its customs code, and measures such as how fast the rules were
+changing, which goods were at risk of being reclassified, and where shipments were piling up. A screening service checked
+names against 223,000 people and companies on government sanctions and watch lists.</p>
+<p>It shipped as a web portal, an API for other software to call, and a daily email digest.</p>
+</section>
+<section>
+<h2>Forecast</h2>
+<p><span class="newthought">The alerts were the first layer.</span> The product was forecast: twelve models, each one
+trainable from records the government already publishes, so the system could say not just what had changed but what
+was coming. Among them: a quiet spell in routine trade notices as the sign that a major action is days away; how much a
+product's imports fall for each point of tariff; where trade moves when a tariff lands on one country; the rush of
+shipments before a tariff takes effect; and when, and on which goods, a trading partner hits back.</p>
+<p>The ingestion was built for it: every field kept, the full text kept, every timestamp kept, so the models would have
+history to learn from.</p>
+</section>
+
+<section>
+<h2>The site</h2>
+<figure class="fullwidth"><div class="frame"><iframe src="/covenant-crucible/archive/" title="The Covenant &amp; Crucible website, a static copy" loading="lazy"></iframe></div><figcaption>A static copy of the public site, without its scripts, prices or sign-up. Scroll inside the frame, or <a href="/covenant-crucible/site/">open it full size</a>.</figcaption></figure>
+</section>
+<section>
+<h2>Built with</h2>
+<p>AWS Lambda, EventBridge, API Gateway, CloudFront, RDS Postgres, SES and Cognito; AWS CDK; Next.js and React; Stripe; GitHub Actions.</p>
+</section>
+<p class="colophon">Next: <a href="/agewarden/"><span class="sc">AGEWARDEN</span></a>. &nbsp;<a href="/">Darren Helton</a>.</p>
+</article>
+</body>
+</html>
